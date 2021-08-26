@@ -1,0 +1,44 @@
+{% set name = "epixhr-single-10k" %}
+{% set version = "3.0.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+sources:
+  url:  https://pswww.slac.stanford.edu/swdoc/tutorials/{{ name }}-{{ version }}.tar.gz
+  sha256: 8cfbdf1327ac3ee732007e92847a159bc6cbb07ba687debff93fb98e56764b46 
+  patches:
+    - pip.patch
+
+build:
+  skip: True  # [win or osx]
+  noarch: python
+  number: 0
+  script:
+    - "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pip
+  run:
+    - python
+
+about:
+  home: https://github.com/slaclab/cameralink-gateway
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: 'Cameralink-gateway software and firmware'
+  description: |
+    firmware for cameralink-gateway devices.
+  doc_url: https://github.com/slaclab/cameralink-gateway
+  dev_url: https://github.com/slaclab/cameralink-gateway
+
+extra:
+  recipe-maintainers:
+    - valmar
+    - chrisvam
+
