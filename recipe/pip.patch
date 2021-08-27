@@ -2,7 +2,7 @@ diff --git a/setup.py b/setup.py
 new file mode 100644
 index 0000000..82cca2a
 --- /dev/null
-+++ b/setup.py
++++ setup.py
 @@ -0,0 +1,55 @@
 +from setuptools import setup
 +
@@ -63,7 +63,7 @@ diff --git a/software/python/__init__.py b/software/python/__init__.py
 new file mode 100644
 index 0000000..ac986c9
 --- /dev/null
-+++ b/software/python/__init__.py
++++ software/python/__init__.py
 @@ -0,0 +1,13 @@
 +
 +#!/usr/bin/env python
