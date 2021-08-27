@@ -1,4 +1,4 @@
-{% set name = "epixhr-single-10k" %}
+{% set name = "epix-hr-single-10k" %}
 {% set version = "3.0.1" %}
 
 package:
