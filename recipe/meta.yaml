@@ -1,18 +1,20 @@
 {% set name = "epix-hr-single-10k" %}
-{% set version = "3.1.1" %}
+{% set version = "v.1.0.0" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: 1.0.0
 
 source:
-  url:  https://pswww.slac.stanford.edu/swdoc/tutorials/{{ name }}-{{ version }}.tar.gz
-  sha256: 64812960625af29874583e41ffc477b70afeef5ec12b0f46157425c15e907e7c
+  url:  https://pswww.slac.stanford.edu/swdoc/tutorials/{{ name }}-1.0.0.tar.gz
+  sha256:  f540dba15f400818d5eaca1580a78910f9e4c45256c30f5ff892bdde1592f98c
+  patches:
+    - setup.patch
 
 build:
   skip: True  # [win or osx]
   noarch: python
-  number: 8
+  number: 0
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
@@ -25,15 +27,15 @@ requirements:
     - python
 
 about:
-  home: https://github.com/slaclab/cameralink-gateway
+  home: https://github.com/slaclab/epix-hr-single-10k
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Cameralink-gateway software and firmware'
+  summary: 'EpixHR single 10k software and firmware'
   description: |
     firmware for cameralink-gateway devices.
-  doc_url: https://github.com/slaclab/cameralink-gateway
-  dev_url: https://github.com/slaclab/cameralink-gateway
+  doc_url: https://github.com/slaclab/epix-hr-single-10k
+  dev_url: https://github.com/slaclab/epix-hr-single-10k
 
 extra:
   recipe-maintainers:
