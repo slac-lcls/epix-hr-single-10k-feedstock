@@ -1,5 +1,5 @@
 diff --git a/setup.py b/setup.py
-index 82cca2a..4f6eb63 100644
+index 82cca2a..0eec0e8 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -13,19 +13,23 @@ setup(
@@ -27,7 +27,7 @@ index 82cca2a..4f6eb63 100644
          'epix_hr_single_10k.surf.ethernet',
          'epix_hr_single_10k.surf.ethernet.gige',
          'epix_hr_single_10k.surf.ethernet.mac',
-@@ -36,12 +40,17 @@ setup(
+@@ -36,12 +40,18 @@ setup(
          'epix_hr_single_10k.surf.protocols',
          'epix_hr_single_10k.surf.protocols.batcher',
          'epix_hr_single_10k.surf.protocols.clink',
@@ -39,13 +39,14 @@ index 82cca2a..4f6eb63 100644
 +        'epix_hr_single_10k.surf.protocols.sugoi',
          'epix_hr_single_10k.surf.protocols.ssi',
 +        'epix_hr_single_10k.surf.protocols.ssp',
++        'epix_hr_single_10k.surf.protocols.coaxpress',
          'epix_hr_single_10k.surf.xilinx',
 +        'epix_hr_single_10k.l2si_core',
 +        'epix_hr_single_10k.epix_hr_core',
      ],
      package_dir = {
          'epix_hr_single_10k': 'software/python',
-@@ -51,5 +60,8 @@ setup(
+@@ -51,5 +61,8 @@ setup(
          'epix_hr_single_10k.ePixFpga': 'software/python/ePixFpga',
          'epix_hr_single_10k.ePixViewer': 'software/python/ePixViewer',
          'epix_hr_single_10k.XilinxKcu1500Pgp3': 'software/python/XilinxKcu1500Pgp3',
